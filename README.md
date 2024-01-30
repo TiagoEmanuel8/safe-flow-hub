@@ -1,73 +1,141 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Boas vindas ao projeto Safe Flow Hub
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+- [Apresentação do projeto](#apresentação-do-projeto)
+- [Tecnologias](#tecnologias)
+- [Funcionalidades](#funcionalidades)
+- [Instalação e uso](#instalação-e-uso)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+#  Apresentação do projeto
+O projeto Safe Flow Hub é uma aplicação backend que gerencia pagamentos de usuários dentro de um sistema utilizando arquitetura de microservices, além de rabbitmq, nest.js, aws, docker, mongodb.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Atualmente estou desenvolvendo o projeto, estou implementando a comunicação entre os services dessa aplicação
 
-## Installation
+# Tecnologias:
+<div>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/typescript-339933?style=for-the-badge&logo=typescript&color=gray" />
+  </a>
+  <a href="https://docs.npmjs.com/">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&color=gray" />
+  </a>
+  <a href="https://nestjs.com/">
+    <img src="https://img.shields.io/badge/nest-339933?style=for-the-badge&logo=nestjs&color=gray" /> 
+  </a>
+  <a href="https://www.mongodb.com/pt-br">
+    <img src="https://img.shields.io/badge/mongodb-339933?style=for-the-badge&logo=mongodb&color=gray" />
+  </a>
+  <a href="https://mongoosejs.com/">
+    <img src="https://img.shields.io/badge/mongoose-339933?style=for-the-badge&logo=mongoose&color=gray" />
+  </a>
+  <a href="https://rabbitmq.com/">
+    <img src="https://img.shields.io/badge/rabbitmq-339933?style=for-the-badge&logo=rabbitmq&color=gray" />
+  </a>
+  <a href="https://microservices.io/">
+    <img src="https://img.shields.io/badge/microservices-339933?style=for-the-badge&logo=microservices&color=gray" />
+  </a>
+  <a href="https://aws.amazon.com/pt/">
+    <img src="https://img.shields.io/badge/aws-339933?style=for-the-badge&logo=aws&color=gray"/>
+  </a>
+  <a href="https://www.npmjs.com/package/dotenv">
+    <img src="https://img.shields.io/badge/dotenv-339933?style=for-the-badge&logo=dotenv&color=gray"/>
+  </a>
+   <a href="https://git-scm.com/">
+    <img src="https://img.shields.io/badge/git-339933?style=for-the-badge&logo=git&color=gray" />
+  </a>
+   <a href="https://www.docker.com/">
+    <img src="https://img.shields.io/badge/docker-339933?style=for-the-badge&logo=docker&color=gray" />
+    </a>
+</div>
 
-```bash
-$ npm install
+# Instalação e uso
+
+Para executar o projeto sua máquina deve satisfazer os requisitos abaixo.  
+  
+Pré-requisitos  
+  
+```  
+- node v18.16.0  
+- npm v9.5.1  
+- git version v2.34.1  
+  
+```  
+  
+[Download node js](https://nodejs.org/en/)  
+  
+[Download git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  
+  
+### Clonando o projeto  
+  
+Digite o comando abaixo para clonar o projeto.  
+  
+```  
+git clone https://github.com/TiagoEmanuel8/safe-flow-hub.git
+  
+```  
+  
+Entre na pasta  
+  
+```  
+cd safe-flow-hub
+  
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+Crie um arquivo *.env* na raiz do projeto e preencha com os valores 
+```  
+Obs: na raiz do projeto existe um modelo pré pronto contendo nomes das variáveis de ambiente necessárias para o projeto funcionar corretamente
 ```
 
-## Test
+### Executando o projeto com **docker**
 
-```bash
-# unit tests
-$ npm run test
+<details>
 
-# e2e tests
-$ npm run test:e2e
+<summary>Clique para exibir os detalhes</summary>
 
-# test coverage
-$ npm run test:cov
-```
 
-## Support
+### Execute o comando abaixo para iniciar o docker  
+  
+```  
+docker-compose up -d
+```  
+### Execute o projeto  
+  use o comando:
+```  
+npm start  
+```  
+ou
+```  
+npm run start:dev  
+```  
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Caso queira parar a execução do docker use o comando
+  
+```  
+docker-compose down --rmi local --volumes --remove-orphans
+```  
 
-## Stay in touch
+</details>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Executando o projeto **localmente**
 
-## License
+<details>
 
-Nest is [MIT licensed](LICENSE).
+<summary>Clique para exibir os detalhes</summary>
+  
+### Instale as dependências  
+  
+```  
+npm install  
+```  
+### Execute o projeto  
+  
+```  
+npm start  
+```  
+ou
+``` 
+npm run start:dev  
+``` 
+</details>
+
+---
