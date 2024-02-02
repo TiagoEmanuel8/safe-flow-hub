@@ -69,7 +69,6 @@ services:
       - 'mongodb_master_data:/bitnami/mongodb'
     ports:
       - '27017:27017'
-
   mongodb-secondary:
     image: docker.io/bitnami/mongodb:5.0
     depends_on:
