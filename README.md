@@ -49,9 +49,9 @@ O projeto está em fase de implementação de **kubernetes**
 
 O projeto contém 3 services: `auth`, `biling` e `orders` em comunicação através do rabbitmq
 
-- auth: responsável por lidar com usuarios e autenticação
-- biling: para lidar com pagamentos
-- orders: para lidar com pedidos
+- **auth**: responsável por lidar com usuarios e autenticação
+- **biling**: para lidar com pagamentos
+- **orders**: para lidar com pedidos
 
 ```  
 Obs: o arquivo  `Safe Flow.postman_collection` presente na raiz do projeto contém os exemplos das requisições do projeto
