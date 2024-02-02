@@ -9,7 +9,7 @@
 #  Apresentação do projeto
 O projeto Safe Flow Hub é uma aplicação backend que gerencia pagamentos de usuários dentro de um sistema utilizando arquitetura de microservices, além de rabbitmq, nest.js, aws, docker, mongodb.
 
-Atualmente estou desenvolvendo o projeto, estou implementando a comunicação entre os services dessa aplicação
+O projeto está em fase de implementação de **kubernetes**
 
 # Tecnologias:
 <div>
@@ -34,9 +34,6 @@ Atualmente estou desenvolvendo o projeto, estou implementando a comunicação en
   <a href="https://microservices.io/">
     <img src="https://img.shields.io/badge/microservices-339933?style=for-the-badge&logo=microservices&color=gray" />
   </a>
-  <a href="https://aws.amazon.com/pt/">
-    <img src="https://img.shields.io/badge/aws-339933?style=for-the-badge&logo=aws&color=gray"/>
-  </a>
   <a href="https://www.npmjs.com/package/dotenv">
     <img src="https://img.shields.io/badge/dotenv-339933?style=for-the-badge&logo=dotenv&color=gray"/>
   </a>
@@ -55,15 +52,14 @@ Para executar o projeto sua máquina deve satisfazer os requisitos abaixo.
 Pré-requisitos  
   
 ```  
-- node v18.16.0  
-- npm v9.5.1  
 - git version v2.34.1  
-  
-```  
-  
-[Download node js](https://nodejs.org/en/)  
+- docker v25.0.1
+
+```
   
 [Download git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  
+
+[Download Docker](https://docs.docker.com/engine/install/) 
   
 ### Clonando o projeto  
   
@@ -81,61 +77,22 @@ cd safe-flow-hub
   
 ```
 
-Crie um arquivo *.env* na raiz do projeto e preencha com os valores 
+Crie um arquivo *.env* nos services `apps/auth`, `apps/biling`, `apps/orders`
 ```  
-Obs: na raiz do projeto existe um modelo pré pronto contendo nomes das variáveis de ambiente necessárias para o projeto funcionar corretamente
+Obs: procure pela pasta `env.template` onde já existem exemplo das variáveis de ambiente existente no projeto 
 ```
 
-### Executando o projeto com **docker**
 
-<details>
-
-<summary>Clique para exibir os detalhes</summary>
-
-
-### Execute o comando abaixo para iniciar o docker  
+### Dentro da pasta raiz do projeto, execute o comando abaixo para iniciar o docker  
   
 ```  
-docker-compose up -d
-```  
-### Execute o projeto  
-  use o comando:
-```  
-npm start  
-```  
-ou
-```  
-npm run start:dev  
+docker-compose up
 ```  
 
 ### Caso queira parar a execução do docker use o comando
   
 ```  
-docker-compose down --rmi local --volumes --remove-orphans
+docker-compose down
 ```  
-
-</details>
-
-### Executando o projeto **localmente**
-
-<details>
-
-<summary>Clique para exibir os detalhes</summary>
-  
-### Instale as dependências  
-  
-```  
-npm install  
-```  
-### Execute o projeto  
-  
-```  
-npm start  
-```  
-ou
-``` 
-npm run start:dev  
-``` 
-</details>
 
 ---
