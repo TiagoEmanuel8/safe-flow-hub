@@ -5,6 +5,29 @@
 - [Funcionalidades](#funcionalidades)
 - [Instalação e uso](#instalação-e-uso)
 
+<h2>Sumário</h2>
+<ul>
+  <li><a href="#visao-geral">1 - Visão Geral</a></li>
+  <li><a href="#entrada-demanda">2 - Entrada da Demanda - Hub</a></li>
+  <li><a href="#descoberta">3 - Descoberta Avaliacao pelo Atendimento</a></li>
+  <li><a href="#entregas-valor">4 - Quebrar em Entregas de Valor Projetos</a></li>
+  <li><a href="#plano-atuacao">5 - Plano de Atuacao Projetos</a></li>
+  <li><a href="#planejar-ciclos">6 - Planejar em Ciclos</a></li>
+  <li><a href="#abrir-tarefas">7 - Abrir Tarefas do Ciclo</a></li>
+  <li><a href="#planejamento-ciclo">8 - Planejamento de Ciclo</a></li>
+  <li><a href="#detalhar-tarefas">9 - Detalhar em Tarefas</a></li>
+  <li><a href="#desenvolvimento">10 - Desenvolvimento</a></li>
+  <li><a href="#aceite-interno">11 - Aceite Interno Pronto Inconformidade</a></li>
+  <li><a href="#empacotamento">12 - Empacotamento e Entrega</a></li>
+  <li><a href="#consolidacao-ciclo">13 - Consolidacao do Ciclo Projetos</a></li>
+  <li><a href="#decisao-entrega">14 - Decisao Ha Entrega</a></li>
+  <li><a href="#decisao-encerrado">15 - Decisao Projeto Encerrado</a></li>
+  <li><a href="#done">16 - Done</a></li>
+  <li><a href="#cancelada">17 - Cancelada</a></li>
+  <li><a href="#encerramento">18 - Encerramento Geral do Processo Konecty Orientado a Valor</a></li>
+</ul>
+
+
 
 #  Apresentação do projeto
 O projeto Safe Flow Hub é uma aplicação backend que gerencia pagamentos de usuários dentro de um sistema utilizando arquitetura de microservices, além de rabbitmq, nest.js, aws, docker, mongodb.
@@ -44,6 +67,11 @@ O projeto está em fase de implementação de **kubernetes**
     <img src="https://img.shields.io/badge/docker-339933?style=for-the-badge&logo=docker&color=gray" />
     </a>
 </div>
+
+
+## 1 - Visão Geral <a id="visao-geral"></a>
+
+O fluxo começa com a Entrada da Demanda (Hub), segue para a Descoberta, onde o atendimento qualifica a solicitação como projeto, ticket ou a encerra se não se aplicar. Projetos são decompostos em Entregas Macro, recebendo um Plano de Atuação, depois passam por Planejamento em Ciclo, criação de tarefas e um Planejamento de Ciclo detalhado; tickets entram direto nessa fase. Com as tarefas definidas, ocorre o Desenvolvimento, seguido do Aceite Interno, que pode aprovar (✔) ou devolver (✖) o trabalho. Entregas aprovadas são Empacotadas para o cliente ou encaminhadas à Consolidação do Ciclo (projetos). Se houver entrega, retorna-se ao empacotamento; caso contrário, avalia-se se o Projeto está Encerrado — se sim, marca-se Done, se não, reinicia-se o planejamento. Demandas não aplicáveis ou abandonadas são marcadas como Canceladas.
 
 # Funcionalidades:
 
